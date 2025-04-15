@@ -1,0 +1,29 @@
+{
+  "name": "parallell",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "dev:client": "nodemon client/src/index.js",
+    "dev:proxy": "nodemon client/proxyServer.js",
+    "seed": "node prisma/seed.js",
+    "migrate": "prisma migrate dev",
+    "generate": "prisma generate",
+    "format": "prettier --write .",
+    "db:reset": "npx prisma migrate reset",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "prisma": "^6.6.0"
+  }
+}
